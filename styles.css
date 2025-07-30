@@ -19,7 +19,7 @@ body, html {
 }
 
 /* --------------------------
-   Hero Section (Landing Page)
+   Hero Section
 ----------------------------- */
 .hero {
   position: relative;
@@ -135,7 +135,23 @@ body, html {
 }
 
 /* --------------------------
-   Contact Section (Landing)
+   Team Blueprint Section
+----------------------------- */
+.team-blueprint {
+  background-color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.team-img {
+  max-width: 100%;
+  width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------
+   Contact Section
 ----------------------------- */
 .contact-section {
   background-color: #f5f5f5;
@@ -175,5 +191,9 @@ body, html {
 
   .project {
     padding: 1rem;
+  }
+
+  .team-img {
+    width: 100%;
   }
 }
