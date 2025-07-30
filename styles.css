@@ -1,15 +1,8 @@
-/*──────────────────────────────────────────────────────────────
-  GLOBAL STYLES (unchanged from original file)
-──────────────────────────────────────────────────────────────*/
 :root {
   --color-black: #000;
   --color-white: #fff;
   --color-silver: #c0c0c0;
-  --overlay-gradient: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.3)
-  );
+  --overlay-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
 }
 
 * {
@@ -18,8 +11,7 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+body, html {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--color-black);
@@ -27,7 +19,9 @@ html {
   overflow-x: hidden;
 }
 
-/* Hero Section */
+/* --------------------------
+   Hero Section
+----------------------------- */
 .hero {
   position: relative;
   background: url('futuraBuilder1.png') center/cover no-repeat;
@@ -88,85 +82,62 @@ html {
   transform: scale(1.05);
 }
 
-/*──────────────────────────────────────────────────────────────
-  PROJECTS PAGE STYLES (scoped so index.html won’t change)
-──────────────────────────────────────────────────────────────*/
+/* --------------------------
+   Projects Page
+----------------------------- */
 .projects-section {
-  padding: 6rem 0;
+  padding: 4rem 2rem;
   background-color: var(--color-white);
   color: var(--color-black);
 }
 
-.projects-section .container {
+.projects-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-.projects-section .section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: var(--color-black);
-}
-
-.projects-section .projects-grid {
-  display: grid;
-  /* 1 column on small, up to 3 on large */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
-}
-
-.projects-section .project-card {
-  background-color: var(--color-white);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.project {
+  background-color: #fff;
+  border-left: 4px solid var(--color-silver);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.projects-section .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+.project h3 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-top: 1rem;
 }
 
-.projects-section .project-image-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect */
-  overflow: hidden;
-}
-
-.projects-section .project-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.projects-section .project-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 1.5rem 1rem 0.75rem;
-  color: var(--color-black);
-}
-
-.projects-section .project-description {
-  flex-grow: 1;
+.project p {
   font-size: 1rem;
   line-height: 1.6;
-  margin: 0 1rem 1.5rem;
-  color: #555;
+  color: #444;
+  margin-top: 0.5rem;
 }
 
-/*──────────────────────────────────────────────────────────────
-  TEAM BLUEPRINT & CONTACT (unchanged from your original file)
-──────────────────────────────────────────────────────────────*/
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------
+   Team Blueprint Section
+----------------------------- */
 .team-blueprint {
   background-color: #fff;
   text-align: center;
@@ -185,6 +156,9 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* --------------------------
+   Contact Section
+----------------------------- */
 .contact-section {
   background-color: #f5f5f5;
   color: #000;
@@ -197,39 +171,34 @@ html {
   margin-bottom: 1.5rem;
 }
 
-/*──────────────────────────────────────────────────────────────
-  RESPONSIVE TWEAKS
-──────────────────────────────────────────────────────────────*/
-@media (max-width: 768px) {
-  /* projects page */
-  .projects-section {
-    padding: 4rem 0;
-  }
-
-  .projects-section .section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .projects-section .project-title {
-    font-size: 1.3rem;
-    margin: 1.2rem 0.8rem 0.6rem;
-  }
-
-  .projects-section .project-description {
-    font-size: 0.95rem;
-    margin: 0 0.8rem 1rem;
-  }
-
-  /* hero section */
+/* --------------------------
+   Responsive Tweaks
+----------------------------- */
+@media (max-width: 600px) {
   .tagline {
     font-size: 1.4rem;
   }
+
   .btn {
     padding: 0.6rem 1.2rem;
   }
 
-  /* team blueprint */
+  .projects-section h2 {
+    font-size: 2rem;
+  }
+
+  .project h3 {
+    font-size: 1.2rem;
+  }
+
+  .project p {
+    font-size: 0.95rem;
+  }
+
+  .project {
+    padding: 1rem;
+  }
+
   .team-img {
     max-height: 300px;
   }
