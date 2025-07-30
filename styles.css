@@ -19,7 +19,7 @@ body, html {
 
 .hero {
   position: relative;
-  background: url('/assets/hero.jpg') center/cover no-repeat;
+  background: url('futuraBuilder1.png') center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
