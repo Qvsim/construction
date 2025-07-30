@@ -141,18 +141,19 @@ body, html {
 .team-blueprint {
   background-color: #fff;
   text-align: center;
-  padding: 3rem 1rem;
-  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 .team-img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-height: 500px;
+  object-fit: cover;
   display: block;
   margin: 0 auto;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* --------------------------
@@ -199,6 +200,6 @@ body, html {
   }
 
   .team-img {
-    width: 100%;
+    max-height: 300px;
   }
 }
