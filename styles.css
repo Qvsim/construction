@@ -16,6 +16,7 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--color-black);
   color: var(--color-white);
+  overflow-x: hidden;
 }
 
 /* --------------------------
@@ -141,13 +142,17 @@ body, html {
   background-color: #fff;
   text-align: center;
   padding: 3rem 1rem;
+  overflow-x: hidden;
 }
 
 .team-img {
+  width: 100%;
   max-width: 100%;
-  width: 900px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
 }
 
 /* --------------------------
