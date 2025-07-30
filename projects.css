@@ -1,7 +1,21 @@
-.projects-section {
-  padding: 4rem 2rem;
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-silver: #c0c0c0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
   background-color: var(--color-white);
   color: var(--color-black);
+}
+
+/* Project Section Container */
+.projects-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .projects-section h2 {
@@ -10,58 +24,68 @@
   margin-bottom: 3rem;
 }
 
+/* Responsive Grid Layout */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: auto;
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 1rem;
 }
 
+/* Individual Project Card */
 .project {
-  background-color: #fff;
+  background-color: #f9f9f9;
   border-left: 4px solid var(--color-silver);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
+/* Image Styling */
+.project-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Title & Description */
 .project h3 {
-  font-size: 1.4rem;
-  color: #222;
-  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 0.5rem;
 }
 
 .project p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
 }
 
-.project-img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Mobile Optimization */
 @media (max-width: 600px) {
   .projects-section h2 {
     font-size: 2rem;
   }
 
+  .project {
+    padding: 1rem;
+  }
+
   .project h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .project p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
-  .project {
-    padding: 1rem;
+  .project-img {
+    max-height: 160px;
   }
 }
