@@ -20,6 +20,44 @@ body, html {
 }
 
 /* --------------------------
+   Header Navigation
+----------------------------- */
+.site-header {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.site-nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--color-silver);
+}
+
+/* --------------------------
    Hero Section
 ----------------------------- */
 .hero {
@@ -121,7 +159,7 @@ body, html {
 /* --------------------------
    Responsive Tweaks
 ----------------------------- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .tagline {
     font-size: 1.4rem;
   }
@@ -132,5 +170,14 @@ body, html {
 
   .team-img {
     max-height: 300px;
+  }
+
+  .site-nav a {
+    margin-left: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .site-logo {
+    font-size: 1rem;
   }
 }
