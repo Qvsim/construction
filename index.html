@@ -14,20 +14,22 @@
       <h1 class="tagline">Building Legacy. Shaping NYC.</h1>
       <nav class="cta-buttons">
         <a href="/home.html" class="btn" aria-label="Enter Site">Enter Site</a>
-        <a href="/home.html#projects" class="btn" aria-label="View Projects">View Projects</a>
-        <a href="/home.html#contact" class="btn" aria-label="Contact">Contact</a>
+        <a href="/projects.html" class="btn" aria-label="View Projects">View Projects</a>
+        <a href="#contact" class="btn" aria-label="Contact">Contact</a>
       </nav>
     </section>
   </main>
 
-  <script>
-    // Smooth scroll redirect
-    document.querySelectorAll('a[href^=\"/home.html#\"]').forEach(link => {
-      link.addEventListener(\"click\", function (e) {
-        e.preventDefault();
-        window.location.href = this.getAttribute(\"href\");
-      });
-    });
-  </script>
+  <!-- Contact Section Preview -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p style="max-width: 600px; margin: 0 auto; text-align: center; font-size: 1rem; color: #333;">
+      Interested in working with us? Reach out to discuss your next project.
+      <br><br>
+      <strong>Email:</strong> info@futurabuilders.com<br>
+      <strong>Phone:</strong> (718) 555-1234<br>
+      <strong>Office:</strong> 116-17 Sutphin Blvd, Jamaica, NY 11434
+    </p>
+  </section>
 </body>
 </html>
