@@ -83,59 +83,6 @@ body, html {
 }
 
 /* --------------------------
-   Projects Page
------------------------------ */
-.projects-section {
-  padding: 4rem 2rem;
-  background-color: var(--color-white);
-  color: var(--color-black);
-}
-
-.projects-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.project {
-  background-color: #fff;
-  border-left: 4px solid var(--color-silver);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.project h3 {
-  font-size: 1.4rem;
-  color: #222;
-  margin-top: 1rem;
-}
-
-.project p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-  margin-top: 0.5rem;
-}
-
-.project-img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* --------------------------
    Team Blueprint Section
 ----------------------------- */
 .team-blueprint {
@@ -181,22 +128,6 @@ body, html {
 
   .btn {
     padding: 0.6rem 1.2rem;
-  }
-
-  .projects-section h2 {
-    font-size: 2rem;
-  }
-
-  .project h3 {
-    font-size: 1.2rem;
-  }
-
-  .project p {
-    font-size: 0.95rem;
-  }
-
-  .project {
-    padding: 1rem;
   }
 
   .team-img {
